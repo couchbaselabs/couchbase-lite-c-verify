@@ -1,8 +1,10 @@
 #Clion
 .idea
 
-# build
+#CBL
 lib
+
+# build
 build
 cmake-build-debug
 
