@@ -40,22 +40,3 @@ if(MSVC)
     set(ZLIB_INCLUDE_DIR ${zlib_SOURCE_DIR})
     target_include_directories(zlibstatic PRIVATE ${zlib_BINARY_DIR})
 endif()
-
-FetchContent_Declare(
-        libzip
-        GIT_REPOSITORY https://github.com/nih-at/libzip
-        GIT_TAG v1.7.3
-        GIT_SHALLOW TRUE
-)
-
-option(BUILD_TOOLS "" OFF)
-option(BUILD_DOC "" OFF)
-option(BUILD_REGRESS "" OFF)
-option(BUILD_EXAMPLES "" OFF)
-option(ENABLE_BZIP2 "" OFF)
-option(ENABLE_LZMA "" OFF)
-option(ENABLE_WINDOWS_CRYPTO "" OFF)
-option(ENABLE_OPENSSL "" OFF)
-message(STATUS "Fetching libzip...")
-FetchContent_MakeAvailable(libzip)
-target_include_directories(zip PRIVATE ${zlib_BINARY_DIR})
