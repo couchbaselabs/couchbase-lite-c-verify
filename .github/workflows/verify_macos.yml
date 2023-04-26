@@ -1,0 +1,28 @@
+name: Verify macOS
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    strategy:
+       matrix:
+         edition: ["enterprise", "community"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: "Build and Verify"
+        env:
+          EDITION: ${{ matrix.edition }}
+        run: |
+          VERSION=$(cat version.txt)
+          ./scripts/verify_macos.sh ${VERSION} ${EDITION}
+          

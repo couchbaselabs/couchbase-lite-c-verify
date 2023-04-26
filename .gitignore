@@ -1,4 +1,9 @@
+#Clion
+.idea
+
 # build
+lib
+build
 cmake-build-debug
 
 # mac
