@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40A7893229FA1F88003B2C61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7893129FA1F88003B2C61 /* AppDelegate.m */; };
+		40A7893529FA1F88003B2C61 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7893429FA1F88003B2C61 /* SceneDelegate.m */; };
+		40A7893829FA1F88003B2C61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7893729FA1F88003B2C61 /* ViewController.m */; };
+		40A7893B29FA1F88003B2C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40A7893929FA1F88003B2C61 /* Main.storyboard */; };
+		40A7893D29FA1F89003B2C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40A7893C29FA1F89003B2C61 /* Assets.xcassets */; };
+		40A7894029FA1F89003B2C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40A7893E29FA1F89003B2C61 /* LaunchScreen.storyboard */; };
+		40A7894329FA1F89003B2C61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7894229FA1F89003B2C61 /* main.m */; };
+		40A7894D29FA1F89003B2C61 /* CBLC_VerifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7894C29FA1F89003B2C61 /* CBLC_VerifyTests.m */; };
+		40A7895729FA1F89003B2C61 /* CBLC_VerifyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7895629FA1F89003B2C61 /* CBLC_VerifyUITests.m */; };
+		40A7895929FA1F89003B2C61 /* CBLC_VerifyUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7895829FA1F89003B2C61 /* CBLC_VerifyUITestsLaunchTests.m */; };
+		40A7896729FA205A003B2C61 /* CouchbaseLite.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A7896629FA2059003B2C61 /* CouchbaseLite.xcframework */; };
+		40A7896829FA205A003B2C61 /* CouchbaseLite.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40A7896629FA2059003B2C61 /* CouchbaseLite.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		40A7896C29FA20A5003B2C61 /* Verification.mm in Sources */ = {isa = PBXBuildFile; fileRef = 40A7896B29FA20A5003B2C61 /* Verification.mm */; };
+		40A7896D29FA20A5003B2C61 /* Verification.mm in Sources */ = {isa = PBXBuildFile; fileRef = 40A7896B29FA20A5003B2C61 /* Verification.mm */; };
+		40A7896E29FA22CA003B2C61 /* CouchbaseLite.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A7896629FA2059003B2C61 /* CouchbaseLite.xcframework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40A7894929FA1F89003B2C61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40A7892529FA1F88003B2C61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40A7892C29FA1F88003B2C61;
+			remoteInfo = "CBLC-Verify";
+		};
+		40A7895329FA1F89003B2C61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40A7892529FA1F88003B2C61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40A7892C29FA1F88003B2C61;
+			remoteInfo = "CBLC-Verify";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		40A7896929FA205A003B2C61 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				40A7896829FA205A003B2C61 /* CouchbaseLite.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		40A7892D29FA1F88003B2C61 /* CBLC-Verify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CBLC-Verify.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40A7893029FA1F88003B2C61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		40A7893129FA1F88003B2C61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		40A7893329FA1F88003B2C61 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		40A7893429FA1F88003B2C61 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		40A7893629FA1F88003B2C61 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		40A7893729FA1F88003B2C61 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		40A7893A29FA1F88003B2C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40A7893C29FA1F89003B2C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40A7893F29FA1F89003B2C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40A7894129FA1F89003B2C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40A7894229FA1F89003B2C61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		40A7894829FA1F89003B2C61 /* CBLC-VerifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CBLC-VerifyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40A7894C29FA1F89003B2C61 /* CBLC_VerifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBLC_VerifyTests.m; sourceTree = "<group>"; };
+		40A7895229FA1F89003B2C61 /* CBLC-VerifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CBLC-VerifyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40A7895629FA1F89003B2C61 /* CBLC_VerifyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBLC_VerifyUITests.m; sourceTree = "<group>"; };
+		40A7895829FA1F89003B2C61 /* CBLC_VerifyUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBLC_VerifyUITestsLaunchTests.m; sourceTree = "<group>"; };
+		40A7896629FA2059003B2C61 /* CouchbaseLite.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CouchbaseLite.xcframework; path = Frameworks/CouchbaseLite.xcframework; sourceTree = "<group>"; };
+		40A7896A29FA20A5003B2C61 /* Verification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Verification.h; sourceTree = "<group>"; };
+		40A7896B29FA20A5003B2C61 /* Verification.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Verification.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40A7892A29FA1F88003B2C61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40A7896729FA205A003B2C61 /* CouchbaseLite.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40A7894529FA1F89003B2C61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40A7896E29FA22CA003B2C61 /* CouchbaseLite.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40A7894F29FA1F89003B2C61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40A7892429FA1F88003B2C61 = {
+			isa = PBXGroup;
+			children = (
+				40A7892F29FA1F88003B2C61 /* CBLC-Verify */,
+				40A7894B29FA1F89003B2C61 /* CBLC-VerifyTests */,
+				40A7895529FA1F89003B2C61 /* CBLC-VerifyUITests */,
+				40A7892E29FA1F88003B2C61 /* Products */,
+				40A7896529FA2059003B2C61 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		40A7892E29FA1F88003B2C61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40A7892D29FA1F88003B2C61 /* CBLC-Verify.app */,
+				40A7894829FA1F89003B2C61 /* CBLC-VerifyTests.xctest */,
+				40A7895229FA1F89003B2C61 /* CBLC-VerifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40A7892F29FA1F88003B2C61 /* CBLC-Verify */ = {
+			isa = PBXGroup;
+			children = (
+				40A7893029FA1F88003B2C61 /* AppDelegate.h */,
+				40A7893129FA1F88003B2C61 /* AppDelegate.m */,
+				40A7893329FA1F88003B2C61 /* SceneDelegate.h */,
+				40A7893429FA1F88003B2C61 /* SceneDelegate.m */,
+				40A7893629FA1F88003B2C61 /* ViewController.h */,
+				40A7893729FA1F88003B2C61 /* ViewController.m */,
+				40A7893929FA1F88003B2C61 /* Main.storyboard */,
+				40A7893C29FA1F89003B2C61 /* Assets.xcassets */,
+				40A7893E29FA1F89003B2C61 /* LaunchScreen.storyboard */,
+				40A7894129FA1F89003B2C61 /* Info.plist */,
+				40A7894229FA1F89003B2C61 /* main.m */,
+				40A7896A29FA20A5003B2C61 /* Verification.h */,
+				40A7896B29FA20A5003B2C61 /* Verification.mm */,
+			);
+			path = "CBLC-Verify";
+			sourceTree = "<group>";
+		};
+		40A7894B29FA1F89003B2C61 /* CBLC-VerifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				40A7894C29FA1F89003B2C61 /* CBLC_VerifyTests.m */,
+			);
+			path = "CBLC-VerifyTests";
+			sourceTree = "<group>";
+		};
+		40A7895529FA1F89003B2C61 /* CBLC-VerifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				40A7895629FA1F89003B2C61 /* CBLC_VerifyUITests.m */,
+				40A7895829FA1F89003B2C61 /* CBLC_VerifyUITestsLaunchTests.m */,
+			);
+			path = "CBLC-VerifyUITests";
+			sourceTree = "<group>";
+		};
+		40A7896529FA2059003B2C61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40A7896629FA2059003B2C61 /* CouchbaseLite.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40A7892C29FA1F88003B2C61 /* CBLC-Verify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40A7895C29FA1F89003B2C61 /* Build configuration list for PBXNativeTarget "CBLC-Verify" */;
+			buildPhases = (
+				40A7892929FA1F88003B2C61 /* Sources */,
+				40A7892A29FA1F88003B2C61 /* Frameworks */,
+				40A7892B29FA1F88003B2C61 /* Resources */,
+				40A7896929FA205A003B2C61 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CBLC-Verify";
+			productName = "CBLC-Verify";
+			productReference = 40A7892D29FA1F88003B2C61 /* CBLC-Verify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		40A7894729FA1F89003B2C61 /* CBLC-VerifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40A7895F29FA1F89003B2C61 /* Build configuration list for PBXNativeTarget "CBLC-VerifyTests" */;
+			buildPhases = (
+				40A7894429FA1F89003B2C61 /* Sources */,
+				40A7894529FA1F89003B2C61 /* Frameworks */,
+				40A7894629FA1F89003B2C61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40A7894A29FA1F89003B2C61 /* PBXTargetDependency */,
+			);
+			name = "CBLC-VerifyTests";
+			productName = "CBLC-VerifyTests";
+			productReference = 40A7894829FA1F89003B2C61 /* CBLC-VerifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		40A7895129FA1F89003B2C61 /* CBLC-VerifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40A7896229FA1F89003B2C61 /* Build configuration list for PBXNativeTarget "CBLC-VerifyUITests" */;
+			buildPhases = (
+				40A7894E29FA1F89003B2C61 /* Sources */,
+				40A7894F29FA1F89003B2C61 /* Frameworks */,
+				40A7895029FA1F89003B2C61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40A7895429FA1F89003B2C61 /* PBXTargetDependency */,
+			);
+			name = "CBLC-VerifyUITests";
+			productName = "CBLC-VerifyUITests";
+			productReference = 40A7895229FA1F89003B2C61 /* CBLC-VerifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40A7892529FA1F88003B2C61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					40A7892C29FA1F88003B2C61 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					40A7894729FA1F89003B2C61 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 40A7892C29FA1F88003B2C61;
+					};
+					40A7895129FA1F89003B2C61 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 40A7892C29FA1F88003B2C61;
+					};
+				};
+			};
+			buildConfigurationList = 40A7892829FA1F88003B2C61 /* Build configuration list for PBXProject "CBLC-Verify" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40A7892429FA1F88003B2C61;
+			productRefGroup = 40A7892E29FA1F88003B2C61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40A7892C29FA1F88003B2C61 /* CBLC-Verify */,
+				40A7894729FA1F89003B2C61 /* CBLC-VerifyTests */,
+				40A7895129FA1F89003B2C61 /* CBLC-VerifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40A7892B29FA1F88003B2C61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40A7894029FA1F89003B2C61 /* LaunchScreen.storyboard in Resources */,
+				40A7893D29FA1F89003B2C61 /* Assets.xcassets in Resources */,
+				40A7893B29FA1F88003B2C61 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40A7894629FA1F89003B2C61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40A7895029FA1F89003B2C61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40A7892929FA1F88003B2C61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40A7893829FA1F88003B2C61 /* ViewController.m in Sources */,
+				40A7893229FA1F88003B2C61 /* AppDelegate.m in Sources */,
+				40A7896C29FA20A5003B2C61 /* Verification.mm in Sources */,
+				40A7894329FA1F89003B2C61 /* main.m in Sources */,
+				40A7893529FA1F88003B2C61 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40A7894429FA1F89003B2C61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40A7896D29FA20A5003B2C61 /* Verification.mm in Sources */,
+				40A7894D29FA1F89003B2C61 /* CBLC_VerifyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40A7894E29FA1F89003B2C61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40A7895729FA1F89003B2C61 /* CBLC_VerifyUITests.m in Sources */,
+				40A7895929FA1F89003B2C61 /* CBLC_VerifyUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40A7894A29FA1F89003B2C61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40A7892C29FA1F88003B2C61 /* CBLC-Verify */;
+			targetProxy = 40A7894929FA1F89003B2C61 /* PBXContainerItemProxy */;
+		};
+		40A7895429FA1F89003B2C61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40A7892C29FA1F88003B2C61 /* CBLC-Verify */;
+			targetProxy = 40A7895329FA1F89003B2C61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40A7893929FA1F88003B2C61 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40A7893A29FA1F88003B2C61 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		40A7893E29FA1F89003B2C61 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40A7893F29FA1F89003B2C61 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40A7895A29FA1F89003B2C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		40A7895B29FA1F89003B2C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40A7895D29FA1F89003B2C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2Q372V7W2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CBLC-Verify/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.couchbase.CBLC-Verify";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40A7895E29FA1F89003B2C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2Q372V7W2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CBLC-Verify/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.couchbase.CBLC-Verify";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		40A7896029FA1F89003B2C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2Q372V7W2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.couchbase.CBLC-VerifyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CBLC-Verify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CBLC-Verify";
+			};
+			name = Debug;
+		};
+		40A7896129FA1F89003B2C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2Q372V7W2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.couchbase.CBLC-VerifyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CBLC-Verify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CBLC-Verify";
+			};
+			name = Release;
+		};
+		40A7896329FA1F89003B2C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2Q372V7W2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.couchbase.CBLC-VerifyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CBLC-Verify";
+			};
+			name = Debug;
+		};
+		40A7896429FA1F89003B2C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2Q372V7W2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.couchbase.CBLC-VerifyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CBLC-Verify";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40A7892829FA1F88003B2C61 /* Build configuration list for PBXProject "CBLC-Verify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40A7895A29FA1F89003B2C61 /* Debug */,
+				40A7895B29FA1F89003B2C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40A7895C29FA1F89003B2C61 /* Build configuration list for PBXNativeTarget "CBLC-Verify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40A7895D29FA1F89003B2C61 /* Debug */,
+				40A7895E29FA1F89003B2C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40A7895F29FA1F89003B2C61 /* Build configuration list for PBXNativeTarget "CBLC-VerifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40A7896029FA1F89003B2C61 /* Debug */,
+				40A7896129FA1F89003B2C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40A7896229FA1F89003B2C61 /* Build configuration list for PBXNativeTarget "CBLC-VerifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40A7896329FA1F89003B2C61 /* Debug */,
+				40A7896429FA1F89003B2C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40A7892529FA1F88003B2C61 /* Project object */;
+}
