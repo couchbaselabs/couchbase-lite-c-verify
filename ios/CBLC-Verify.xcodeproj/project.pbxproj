@@ -15,8 +15,6 @@
 		40A7894029FA1F89003B2C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40A7893E29FA1F89003B2C61 /* LaunchScreen.storyboard */; };
 		40A7894329FA1F89003B2C61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7894229FA1F89003B2C61 /* main.m */; };
 		40A7894D29FA1F89003B2C61 /* CBLC_VerifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7894C29FA1F89003B2C61 /* CBLC_VerifyTests.m */; };
-		40A7895729FA1F89003B2C61 /* CBLC_VerifyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7895629FA1F89003B2C61 /* CBLC_VerifyUITests.m */; };
-		40A7895929FA1F89003B2C61 /* CBLC_VerifyUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7895829FA1F89003B2C61 /* CBLC_VerifyUITestsLaunchTests.m */; };
 		40A7896729FA205A003B2C61 /* CouchbaseLite.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A7896629FA2059003B2C61 /* CouchbaseLite.xcframework */; };
 		40A7896829FA205A003B2C61 /* CouchbaseLite.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40A7896629FA2059003B2C61 /* CouchbaseLite.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		40A7896C29FA20A5003B2C61 /* Verification.mm in Sources */ = {isa = PBXBuildFile; fileRef = 40A7896B29FA20A5003B2C61 /* Verification.mm */; };
@@ -26,13 +24,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		40A7894929FA1F89003B2C61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 40A7892529FA1F88003B2C61 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 40A7892C29FA1F88003B2C61;
-			remoteInfo = "CBLC-Verify";
-		};
-		40A7895329FA1F89003B2C61 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 40A7892529FA1F88003B2C61 /* Project object */;
 			proxyType = 1;
@@ -70,9 +61,6 @@
 		40A7894229FA1F89003B2C61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		40A7894829FA1F89003B2C61 /* CBLC-VerifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CBLC-VerifyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A7894C29FA1F89003B2C61 /* CBLC_VerifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBLC_VerifyTests.m; sourceTree = "<group>"; };
-		40A7895229FA1F89003B2C61 /* CBLC-VerifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CBLC-VerifyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		40A7895629FA1F89003B2C61 /* CBLC_VerifyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBLC_VerifyUITests.m; sourceTree = "<group>"; };
-		40A7895829FA1F89003B2C61 /* CBLC_VerifyUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBLC_VerifyUITestsLaunchTests.m; sourceTree = "<group>"; };
 		40A7896629FA2059003B2C61 /* CouchbaseLite.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CouchbaseLite.xcframework; path = Frameworks/CouchbaseLite.xcframework; sourceTree = "<group>"; };
 		40A7896A29FA20A5003B2C61 /* Verification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Verification.h; sourceTree = "<group>"; };
 		40A7896B29FA20A5003B2C61 /* Verification.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Verification.mm; sourceTree = "<group>"; };
@@ -95,13 +83,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		40A7894F29FA1F89003B2C61 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,7 +91,6 @@
 			children = (
 				40A7892F29FA1F88003B2C61 /* CBLC-Verify */,
 				40A7894B29FA1F89003B2C61 /* CBLC-VerifyTests */,
-				40A7895529FA1F89003B2C61 /* CBLC-VerifyUITests */,
 				40A7892E29FA1F88003B2C61 /* Products */,
 				40A7896529FA2059003B2C61 /* Frameworks */,
 			);
@@ -121,7 +101,6 @@
 			children = (
 				40A7892D29FA1F88003B2C61 /* CBLC-Verify.app */,
 				40A7894829FA1F89003B2C61 /* CBLC-VerifyTests.xctest */,
-				40A7895229FA1F89003B2C61 /* CBLC-VerifyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,15 +131,6 @@
 				40A7894C29FA1F89003B2C61 /* CBLC_VerifyTests.m */,
 			);
 			path = "CBLC-VerifyTests";
-			sourceTree = "<group>";
-		};
-		40A7895529FA1F89003B2C61 /* CBLC-VerifyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				40A7895629FA1F89003B2C61 /* CBLC_VerifyUITests.m */,
-				40A7895829FA1F89003B2C61 /* CBLC_VerifyUITestsLaunchTests.m */,
-			);
-			path = "CBLC-VerifyUITests";
 			sourceTree = "<group>";
 		};
 		40A7896529FA2059003B2C61 /* Frameworks */ = {
@@ -210,24 +180,6 @@
 			productReference = 40A7894829FA1F89003B2C61 /* CBLC-VerifyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		40A7895129FA1F89003B2C61 /* CBLC-VerifyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 40A7896229FA1F89003B2C61 /* Build configuration list for PBXNativeTarget "CBLC-VerifyUITests" */;
-			buildPhases = (
-				40A7894E29FA1F89003B2C61 /* Sources */,
-				40A7894F29FA1F89003B2C61 /* Frameworks */,
-				40A7895029FA1F89003B2C61 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				40A7895429FA1F89003B2C61 /* PBXTargetDependency */,
-			);
-			name = "CBLC-VerifyUITests";
-			productName = "CBLC-VerifyUITests";
-			productReference = 40A7895229FA1F89003B2C61 /* CBLC-VerifyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -241,10 +193,6 @@
 						CreatedOnToolsVersion = 14.3;
 					};
 					40A7894729FA1F89003B2C61 = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = 40A7892C29FA1F88003B2C61;
-					};
-					40A7895129FA1F89003B2C61 = {
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = 40A7892C29FA1F88003B2C61;
 					};
@@ -265,7 +213,6 @@
 			targets = (
 				40A7892C29FA1F88003B2C61 /* CBLC-Verify */,
 				40A7894729FA1F89003B2C61 /* CBLC-VerifyTests */,
-				40A7895129FA1F89003B2C61 /* CBLC-VerifyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,13 +229,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		40A7894629FA1F89003B2C61 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		40A7895029FA1F89003B2C61 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -319,15 +259,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		40A7894E29FA1F89003B2C61 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				40A7895729FA1F89003B2C61 /* CBLC_VerifyUITests.m in Sources */,
-				40A7895929FA1F89003B2C61 /* CBLC_VerifyUITestsLaunchTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -335,11 +266,6 @@
 			isa = PBXTargetDependency;
 			target = 40A7892C29FA1F88003B2C61 /* CBLC-Verify */;
 			targetProxy = 40A7894929FA1F89003B2C61 /* PBXContainerItemProxy */;
-		};
-		40A7895429FA1F89003B2C61 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 40A7892C29FA1F88003B2C61 /* CBLC-Verify */;
-			targetProxy = 40A7895329FA1F89003B2C61 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -488,6 +414,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,6 +442,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,12 +458,11 @@
 		40A7896029FA1F89003B2C61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N2Q372V7W2;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.couchbase.CBLC-VerifyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -548,50 +475,17 @@
 		40A7896129FA1F89003B2C61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N2Q372V7W2;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.couchbase.CBLC-VerifyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CBLC-Verify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CBLC-Verify";
-			};
-			name = Release;
-		};
-		40A7896329FA1F89003B2C61 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N2Q372V7W2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.couchbase.CBLC-VerifyUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "CBLC-Verify";
-			};
-			name = Debug;
-		};
-		40A7896429FA1F89003B2C61 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N2Q372V7W2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.couchbase.CBLC-VerifyUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "CBLC-Verify";
 			};
 			name = Release;
 		};
@@ -621,15 +515,6 @@
 			buildConfigurations = (
 				40A7896029FA1F89003B2C61 /* Debug */,
 				40A7896129FA1F89003B2C61 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		40A7896229FA1F89003B2C61 /* Build configuration list for PBXNativeTarget "CBLC-VerifyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				40A7896329FA1F89003B2C61 /* Debug */,
-				40A7896429FA1F89003B2C61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
