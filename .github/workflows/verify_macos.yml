@@ -1,4 +1,4 @@
-name: Verify macOS
+name: Verify macOS zip
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - "**"
 
 jobs:
-  build:
+  verify:
     runs-on: macOS-latest
     strategy:
        matrix:
@@ -20,9 +20,6 @@ jobs:
         with:
           submodules: recursive
       - name: "Build and Verify"
-        env:
-          EDITION: ${{ matrix.edition }}
         run: |
           VERSION=$(cat version.txt)
-          ./scripts/verify_macos.sh ${VERSION} ${EDITION}
-          
+          ./desktop/scripts/verify_macos_zip.sh ${VERSION} ${{ matrix.edition }}
