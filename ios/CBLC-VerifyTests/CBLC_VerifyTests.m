@@ -22,7 +22,7 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-- (void)testExample {
+- (void)testVerification {
     Verification* v = [[Verification alloc] init];
     XCTAssertTrue([v verify]);
 }

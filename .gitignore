@@ -3,10 +3,14 @@
 
 #CBL
 lib
+*.xcframework
 
 # build
 build
 cmake-build-debug
+
+# Xcode
+xcuserdata
 
 # mac
 .DS_Store
