@@ -12,5 +12,8 @@ cmake-build-debug
 # Xcode
 xcuserdata
 
+# docker
+.env
+
 # mac
 .DS_Store
