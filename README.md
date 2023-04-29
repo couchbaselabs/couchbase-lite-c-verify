@@ -1,8 +1,8 @@
-This repo is for verifying CBL-C release packages. The repo uses Github actions to verify amd64 linux, iOS, android binaries and provides docker compose setup that can be used for verifying the arm64 and armhf binaries.
+This repo uses Github actions to verify amd64 linux, iOS, android binaries and provides Dockerfile and Docker Compose YAML file that can be used for verifying the arm64 and armhf binaries.
 
-How to verify
+## How to verify
 
-Verify amd64 linux, iOS, android binaries.
+### Verify amd64 linux, iOS, android binaries.
 
 1. Update version number in version.txt
 
@@ -10,7 +10,7 @@ Verify amd64 linux, iOS, android binaries.
 
 3. Github actions will be run to verify the binaries.
 
-Verify arm64 and armhf binaries.
+### Verify arm64 and armhf binaries.
 
 1. cd desktop
 
@@ -39,4 +39,4 @@ docker compose up
 docker compose down --rmi all
 ```
 
-Note: I couldn't find a way to let 'docker compose up' use a new environment values to run without cleaning up containers and images.
+Note: I couldn't find a way to tell 'docker compose up' to use a new environment values to run the CMD in the Dockerfile without cleaning up containers and images.
