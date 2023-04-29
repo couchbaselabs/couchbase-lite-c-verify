@@ -70,7 +70,7 @@ This repo uses Github actions to verify Android, iOS, Windows, and amd64 linux b
 
 > **Note** Each platform binary has two editions : Enterprise and Community
 
-> **Note** debian 9 is pending for verification
+> **Note** debian 9 is pending for verification.
 
 ## How to verify
 
