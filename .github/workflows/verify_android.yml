@@ -1,0 +1,58 @@
+name: Verify Android
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - "**"
+
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, MinSizeRel, etc.)
+  BUILD_TYPE: Release
+
+jobs:
+  verify:
+    runs-on: macos-latest
+    strategy:
+       matrix:
+         edition: ["enterprise", "community"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Setup Android SDK
+        run: |
+          $ANDROID_SDK_ROOT/tools/bin/sdkmanager --install "ndk;23.1.7779620"
+          $ANDROID_SDK_ROOT/tools/bin/sdkmanager --install "cmake;3.22.1"
+
+      - name: Setup Java SDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: 11
+
+      - name: Download
+        working-directory: ${{github.workspace}}
+        run: | 
+          VERSION=$(cat version.txt)
+          ./android/scripts/download_android.sh ${VERSION} ${{ matrix.edition }}
+
+      - name: Verify
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          # Encounter random emulator issue when using lower API (e.g. 21)
+          api-level: 23
+          arch: x86_64
+          working-directory: ${{github.workspace}}/android
+          script: | 
+            adb logcat -s "CBLC-Verify" &
+            ./gradlew cAT -PabiFilters=x86_64
+
+      - name: Post Tests
+        working-directory: ${{github.workspace}}
+        run: | 
+          ps ax | grep logcat | grep -v grep | awk '{print $1}' | xargs kill
