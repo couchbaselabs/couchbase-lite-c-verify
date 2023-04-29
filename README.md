@@ -21,8 +21,6 @@ ARCH=arm64
 VERSION=3.1.0
 EDITION=enterprise
 ```
-
-Note: 
 * ARCH : arm64 | armhf | amd64
 * EDITION : enterprise | community
 
