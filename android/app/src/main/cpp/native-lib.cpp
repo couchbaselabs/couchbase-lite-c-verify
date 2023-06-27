@@ -96,36 +96,26 @@ Java_com_couchbase_tests_CouchbaseLiteTest_verify(
         }
     }
 
-    CBLCollection* coll = nullptr;
-    if (success) {
-        coll = CBLDatabase_CreateCollection(db, FLStr("tasks"), FLStr("todo"), &error);
-        if (!coll) {
-            AndroidLog::log(kCBLLogError, "cannot create collection, code = " + to_string(error.code));
-            success = false;
-        }
-    }
-
     CBLDocument* doc = nullptr;
     if (success) {
         doc = CBLDocument_CreateWithID(FLStr("doc1"));
         FLMutableDict props = CBLDocument_MutableProperties(doc);
         FLMutableDict_SetString(props, FLStr("name"), FLStr("Verify CBL-C"));
 
-        if (!CBLCollection_SaveDocument(coll, doc, &error)) {
+        if (!CBLDatabase_SaveDocument(db, doc, &error)) {
             AndroidLog::log(kCBLLogError, "Failed : cannot save a document, code = " + to_string(error.code));
             success = false;
         }
     }
 
     if (success) {
-        if (CBLCollection_Count(coll) != 1) {
+        if (CBLDatabase_Count(db) != 1) {
             AndroidLog::log(kCBLLogError, "Invalid document count");
             success = false;
         }
     }
 
     CBLDocument_Release(doc);
-    CBLCollection_Release(coll);
     CBLDatabase_Release(db);
 
     AndroidLog::log(kCBLLogInfo, (success ? "Passed" : "Failed"));

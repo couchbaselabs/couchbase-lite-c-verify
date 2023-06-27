@@ -51,36 +51,26 @@ int main() {
         }
     }
 
-    CBLCollection* coll = nullptr;
-    if (success) {
-        coll = CBLDatabase_CreateCollection(db, FLStr("tasks"), FLStr("todo"), &error);
-        if (!coll) {
-            cerr << "Failed : cannot create collection, code = " << error.code << endl;
-            success = false;
-        }
-    }
-
     CBLDocument* doc = nullptr;
     if (success) {
         doc = CBLDocument_CreateWithID(FLStr("doc1"));
         FLMutableDict props = CBLDocument_MutableProperties(doc);
         FLMutableDict_SetString(props, FLStr("name"), FLStr("Verify CBL-C"));
 
-        if (!CBLCollection_SaveDocument(coll, doc, &error)) {
-            cerr << "Failed : invalid document count, code = " << error.code << endl;
+        if (!CBLDatabase_SaveDocument(db, doc, &error)) {
+            cerr << "Failed : cannot save a document" << error.code << endl;
             success = false;
         }
     }
 
     if (success) {
-        if (CBLCollection_Count(coll) != 1) {
-            cerr << "Failed : cannot save a document" << endl;
+        if (CBLDatabase_Count(db) != 1) {
+            cerr << "Failed : invalid document count" << endl;
             success = false;
         }
     }
 
     CBLDocument_Release(doc);
-    CBLCollection_Release(coll);
     CBLDatabase_Release(db);
 
     cout << "Result : " << (success ? "Passed" : "Failed") << endl;

@@ -13,5 +13,5 @@ if [ $ARCH = "armhf" ]; then
     DEBIAN_FRONTEND=noninteractive apt -yqq install wget cmake build-essential g++-arm-linux-gnueabihf 
 else
     apt -yqq update
-    DEBIAN_FRONTEND=noninteractive apt -yqq install wget cmake build-essential
+    DEBIAN_FRONTEND=noninteractive apt -yqq install wget cmake build-essential libicu-dev zlib1g-dev
 fi

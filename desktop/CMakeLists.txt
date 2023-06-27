@@ -10,7 +10,7 @@ add_subdirectory(vendor)
 
 message(STATUS ${CMAKE_LIBRARY_ARCHITECTURE})
 
-find_package(CouchbaseLite 3.1.0 REQUIRED)
+find_package(CouchbaseLite 3.0.12 REQUIRED)
 
 set(SOURCE_FILES src/main.cpp)
 
