@@ -15,7 +15,7 @@ BUILD_DIR=$SCRIPT_DIR/../build
 rm -rf $CBL_LIB_DIR 2> /dev/null
 mkdir -p $CBL_LIB_DIR
 pushd $CBL_LIB_DIR > /dev/null
-ZIP_FILENAME=couchbase-lite-c-${EDITION}-${VERSION}-linux-x86_64.tar.gz
+ZIP_FILENAME=couchbase-lite-c-${EDITION}-${VERSION}-ubuntu20.04-x86_64.tar.gz
 curl -O https://packages.couchbase.com/releases/couchbase-lite-c/${VERSION}/${ZIP_FILENAME}
 tar xvf ${ZIP_FILENAME}
 rm ${ZIP_FILENAME}

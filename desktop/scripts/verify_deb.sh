@@ -39,8 +39,8 @@ wget "${DEV_DEB_URL}"
 popd > /dev/null
 
 # Step 2: Install the deb files
-apt install -yqq "./${DEB_DIR}/${DEB_FILE}"
-apt install -yqq "./${DEB_DIR}/${DEV_DEB_FILE}"
+DEBIAN_FRONTEND=noninteractive apt install -yqq "./${DEB_DIR}/${DEB_FILE}"
+DEBIAN_FRONTEND=noninteractive apt install -yqq "./${DEB_DIR}/${DEV_DEB_FILE}"
 
 # Step 3: Build and Verify
 rm -rf build && mkdir build
