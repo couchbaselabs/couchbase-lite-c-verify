@@ -86,24 +86,19 @@ This repo uses Github actions to verify Android, iOS, Windows, and amd64 linux b
 
 1. cd desktop
 
-2. Create .env file with the following info as an example
+2. Run docker compose up and check the result:
 
 ```
-ARCH=arm64
-VERSION=3.1.0
-EDITION=enterprise
+ARCH=arm64 EDITION=enterprise VERSION=3.0.12 docker compose up --build
 ```
-* ARCH : arm64 | armhf ( | amd64 )
+
+3. Change the ARCH and EDITION and run step 2 again.
+
+```
+* ARCH : arm64 | armhf
 * EDITION : enterprise | community
 
-
-3. Run docker compose up and check the result
-
-```
-docker compose up
-```
-
-4. Clean up containers and images before running with new variables.
+4. Clean up containers and images
 
 ```
 docker compose down --rmi all
