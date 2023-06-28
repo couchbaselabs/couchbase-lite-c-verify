@@ -97,6 +97,7 @@ ARCH=arm64 EDITION=enterprise VERSION=3.0.12 docker compose up --build
 ```
 * ARCH : arm64 | armhf
 * EDITION : enterprise | community
+```
 
 4. Clean up containers and images
 
