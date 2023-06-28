@@ -8,26 +8,20 @@ This repo uses Github actions to verify Android, iOS, Windows, and amd64 linux b
   <th></th>
   <th></th>
   <th></th>
-  <th colspan="4">Linux amd64</th>
-  <th colspan="4">Linux arm64</th>
-  <th colspan="4">Linux armhf</th>
+  <th colspan="2">Linux amd64</th>
+  <th colspan="2">Linux arm64</th>
+  <th colspan="2">Linux armhf</th>
 <tr>
 <tr>
   <th></th>
   <th>Android</th>
   <th>iOS</th>
   <th>Windows</th>
-  <th>ubuntu 22.04</th>
   <th>ubuntu 20.04</th>
-  <th>debian 11</th>
   <th>debian 10</th>
-  <th>ubuntu 22.04</th>
   <th>ubuntu 20.04</th>
-  <th>debian 11</th>
   <th>debian 10</th>
-  <th>ubuntu 22.04</th>
   <th>ubuntu 20.04</th>
-  <th>debian 11</th>
   <th>debian 10</th>
 <tr>
 <tr>
@@ -37,12 +31,6 @@ This repo uses Github actions to verify Android, iOS, Windows, and amd64 linux b
   <th>x</th>
   <th>x</th>
   <th>x</th>
-  <th>x</th>
-  <th>x</th>
-  <th></th>
-  <th></th>
-  <th></th>
-  <th></th>
   <th></th>
   <th></th>
   <th></th>
@@ -55,12 +43,6 @@ This repo uses Github actions to verify Android, iOS, Windows, and amd64 linux b
   <th></th>
   <th></th>
   <th></th>
-  <th></th>
-  <th></th>
-  <th>x</th>
-  <th>x</th>
-  <th>x</th>
-  <th>x</th>
   <th>x</th>
   <th>x</th>
   <th>x</th>
