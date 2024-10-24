@@ -1,21 +1,27 @@
 #!/bin/bash -e
 
 if [ "$#" -lt 2 ]; then
-    echo "Usage: verify_ios.sh <version: 3.1.0> <edition: community, enterprise>" >&2
+    echo "Usage: verify_ios.sh <version: 3.2.0> <build: 1> <edition: community, enterprise>" >&2
     exit 1
 fi
 
 VERSION=$1
-EDITION=$2
+BLD_NUM=$2
+EDITION=$3
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-WORKSPACE=$SCRIPT_DIR/..
+PROJECT_DIR=$SCRIPT_DIR/..
 
-pushd "$WORKSPACE" > /dev/null
+pushd "$PROJECT_DIR" > /dev/null
 
 pushd Frameworks > /dev/null
-ZIP_FILENAME=couchbase-lite-c-${EDITION}-${VERSION}-ios.zip
-curl -O https://packages.couchbase.com/releases/couchbase-lite-c/${VERSION}/${ZIP_FILENAME}
+if [ "$BLD_NUM" = "0" ]; then
+    ZIP_FILENAME=couchbase-lite-c-${EDITION}-${VERSION}-ios.zip
+    curl -O https://packages.couchbase.com/releases/couchbase-lite-c/${VERSION}/${ZIP_FILENAME}
+else
+    ZIP_FILENAME=couchbase-lite-c-${EDITION}-${VERSION}-${BLD_NUM}-ios.zip
+    curl -O http://latestbuilds.service.couchbase.com/builds/latestbuilds/couchbase-lite-c/${VERSION}/${BLD_NUM}/${ZIP_FILENAME}
+fi
 unzip ${ZIP_FILENAME}
 rm ${ZIP_FILENAME}
 popd > /dev/null
