@@ -1,106 +1,54 @@
-This repo uses Github actions to verify Android, iOS, Windows, and amd64 linux binaries and provides Dockerfile and Docker Compose YAML file that can be used for verifying the arm64 and armhf linux binaries.
-
-### Verification Matrix
-
-<table>
-<tr>
-  <th></th>
-  <th></th>
-  <th></th>
-  <th></th>
-  <th colspan="4">Linux amd64</th>
-  <th colspan="4">Linux arm64</th>
-  <th colspan="4">Linux armhf</th>
-<tr>
-<tr>
-  <th></th>
-  <th>Android</th>
-  <th>iOS</th>
-  <th>Windows</th>
-  <th>ubuntu 22.04</th>
-  <th>ubuntu 20.04</th>
-  <th>debian 11</th>
-  <th>debian 10</th>
-  <th>ubuntu 22.04</th>
-  <th>ubuntu 20.04</th>
-  <th>debian 11</th>
-  <th>debian 10</th>
-  <th>ubuntu 22.04</th>
-  <th>ubuntu 20.04</th>
-  <th>debian 11</th>
-  <th>debian 10</th>
-<tr>
-<tr>
-  <th>Github Action</th>
-  <th>x</th>
-  <th>x</th>
-  <th>x</th>
-  <th>x</th>
-  <th>x</th>
-  <th>x</th>
-  <th>x</th>
-  <th></th>
-  <th></th>
-  <th></th>
-  <th></th>
-  <th></th>
-  <th></th>
-  <th></th>
-  <th></th>
-<tr>
-<tr>
-  <th>Local Machine</th>
-  <th></th>
-  <th></th>
-  <th></th>
-  <th></th>
-  <th></th>
-  <th></th>
-  <th></th>
-  <th>x</th>
-  <th>x</th>
-  <th>x</th>
-  <th>x</th>
-  <th>x</th>
-  <th>x</th>
-  <th>x</th>
-  <th>x</th>
-<tr>
-</table>
-
-> **Note** Each platform binary has two editions : Enterprise and Community
-
-> **Note** debian 9 is pending for verification.
-
 ## How to verify
 
-### Github Action (android, iOS, windows, and amd64 linux)
+### Jenkins
 
-1. Update version number in version.txt
+Currently there are 3 jobs that can be run by specifying Couchbase Lite version and build number for verifying as follows:
 
-2. Create a PR with the update.
+* [c-verify-linux](http://jenkins.mobiledev.couchbase.com/job/c-verify-linux) : Verify ARM64, AMD64, and ARMHF linux binaries
+* [c-verify-windows](http://jenkins.mobiledev.couchbase.com/job/c-verify-wins) : Verify AMD64 Windows binaries
+* [c-verify-apple](http://jenkins.mobiledev.couchbase.com/job/c-verify-apple) : Verify macOS and iOS binaries
 
-3. Github actions will be run to verify the binaries.
+### Local
 
-### Local with Mac M1 (arm64 and armhf linux)
+#### Linux
 
 1. cd desktop
 
-2. Run docker compose up and check the result:
+2. Create .env file with the following environment variables
 
 ```
-ARCH=arm64 EDITION=enterprise VERSION=3.0.12 docker compose up --build
+CBL_VERSION=<CBL Version such as 3.2.1>
+CBL_BUILD=<Build Number>
+CBL_EDITION=<enterprise, community>
+CBL_ARCH=<arm64, amd64, armhf>
+OS_NAME=<debian>
+OS_VERSION=<11, 12>
 ```
-
-3. Change the ARCH and EDITION and run step 2 again.
-
-```
-* ARCH : arm64 | armhf
-* EDITION : enterprise | community
-```
-
-4. Clean up containers and images
+3. Run docker compose up and check the result.
 
 ```
-docker compose down --rmi all
+docker compose up --build
 ```
+
+4. Clean up
+
+```
+docker compose down
+```
+#### Windows
+
+1. cd desktop
+
+2. Run `./scripts/verify_windows.sh <CBL Version: 3.2.1> <Build Number> <Edition: enterprise, community>`
+
+#### macOS
+
+1. cd desktop
+
+2. Run `./scripts/verify_macos.sh <CBL Version: 3.2.1> <Build Number> <Edition: enterprise, community>`
+
+#### iOS
+
+1. cd ios
+
+2. Run `./scripts/verify_ios.sh <CBL Version: 3.2.1> <Build Number> <Edition: enterprise, community>`
