@@ -1,12 +1,16 @@
 #!/bin/bash -e
 
 if [ "$#" -lt 2 ]; then
-    echo "Usage: verify_linux_zip.sh <version: 3.1.0> <edition: community, enterprise>" >&2
+    echo "Usage: verify_linux_zip.sh <arch:arm64,amd64,armhf> <version: 3.2.1> <build: 1> <edition: community, enterprise>" >&2
     exit 1
 fi
 
-VERSION=$1
-EDITION=$2
+ARCH=$1
+VERSION=$2
+BLD_NUM=$3
+EDITION=$4
+
+echo "PARAMS : $ARCH $VERSION $BLD_NUM $EDITION"
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 CBL_LIB_DIR=$SCRIPT_DIR/../lib
@@ -15,8 +19,19 @@ BUILD_DIR=$SCRIPT_DIR/../build
 rm -rf $CBL_LIB_DIR 2> /dev/null
 mkdir -p $CBL_LIB_DIR
 pushd $CBL_LIB_DIR > /dev/null
-ZIP_FILENAME=couchbase-lite-c-${EDITION}-${VERSION}-linux-x86_64.tar.gz
-curl -O https://packages.couchbase.com/releases/couchbase-lite-c/${VERSION}/${ZIP_FILENAME}
+
+if [ "$ARCH" = "amd64" ]; then
+    ARCH="x86_64"
+fi
+
+if [ "$BLD_NUM" = "0" ]; then
+    ZIP_FILENAME=couchbase-lite-c-${EDITION}-${VERSION}-linux-${ARCH}.tar.gz
+    wget https://packages.couchbase.com/releases/couchbase-lite-c/${VERSION}/${ZIP_FILENAME}
+else
+    ZIP_FILENAME=couchbase-lite-c-${EDITION}-${VERSION}-${BLD_NUM}-linux-${ARCH}.tar.gz
+    wget http://latestbuilds.service.couchbase.com/builds/latestbuilds/couchbase-lite-c/${VERSION}/${BLD_NUM}/${ZIP_FILENAME}
+fi
+
 tar xvf ${ZIP_FILENAME}
 rm ${ZIP_FILENAME}
 popd > /dev/null

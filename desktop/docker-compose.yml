@@ -1,49 +1,15 @@
 version: "3.9"
 services:
-  ubuntu-20.04:
+  cbl-c-verify:
+    environment:
+      - CBL_VERSION=${CBL_VERSION:-3.2.1}
+      - CBL_BUILD=${CBL_BUILD:-0}
+      - CBL_EDITION=${CBL_EDITION:-enterprise}
+      - CBL_ARCH=${CBL_ARCH:-arm64}
     build:
       context: .
       args:
-        - PLATFORM=ubuntu
-        - PLATFORM_VERSION=20.04
-        - ARCH=${ARCH:-arm64}
-        - VERSION=${VERSION:-3.1.0}
-        - EDITION=${EDITION:-enterprise}
-  ubuntu-22.04:
-    build:
-      context: .
-      args:
-        - PLATFORM=ubuntu
-        - PLATFORM_VERSION=22.04
-        - ARCH=${ARCH:-arm64}
-        - VERSION=${VERSION:-3.1.0}
-        - EDITION=${EDITION:-enterprise}
-  debian-9:
-    build:
-      context: .
-      args:
-        - PLATFORM=debian
-        - PLATFORM_VERSION=9
-        - ARCH=${ARCH:-amd64}
-        - VERSION=${VERSION:-3.1.0}
-        - EDITION=${EDITION:-enterprise}
-    profiles:
-      - debian-9
-  debian-10:
-    build:
-      context: .
-      args:
-        - PLATFORM=debian
-        - PLATFORM_VERSION=10
-        - ARCH=${ARCH:-arm64}
-        - VERSION=${VERSION:-3.1.0}
-        - EDITION=${EDITION:-enterprise}
-  debian-11:
-    build:
-      context: .
-      args:
-        - PLATFORM=debian
-        - PLATFORM_VERSION=11
-        - ARCH=${ARCH:-arm64}
-        - VERSION=${VERSION:-3.1.0}
-        - EDITION=${EDITION:-enterprise}
+        - OS_NAME=${OS_NAME:-debian}
+        - OS_VERSION=${OS_VERSION:-11}
+        - OS_ARCH=${CBL_ARCH:-arm64}
+        
