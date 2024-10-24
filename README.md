@@ -2,10 +2,10 @@
 
 ### Jenkins
 
-Currently there are 3 jobs that can be run by specifying Couchbase Lite version and build number for verifying as follows:
+Run the following Jenkins job by specifying Couchbase Lite version and build number:
 
-* [c-verify-linux](http://jenkins.mobiledev.couchbase.com/job/c-verify-linux) : Verify ARM64, AMD64, and ARMHF linux binaries
-* [c-verify-windows](http://jenkins.mobiledev.couchbase.com/job/c-verify-wins) : Verify AMD64 Windows binaries
+* [c-verify-linux](http://jenkins.mobiledev.couchbase.com/job/c-verify-linux) : Verify Arm64, Amd64, and Armhf linux binaries
+* [c-verify-windows](http://jenkins.mobiledev.couchbase.com/job/c-verify-wins) : Verify Amd64 Windows binaries
 * [c-verify-apple](http://jenkins.mobiledev.couchbase.com/job/c-verify-apple) : Verify macOS and iOS binaries
 
 ### Local
