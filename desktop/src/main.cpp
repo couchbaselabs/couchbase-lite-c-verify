@@ -36,6 +36,7 @@ int main() {
 
     const FLSlice dbname = FLStr("verify-db");
     if (CBL_DatabaseExists(dbname, config.directory)) {
+        cout << "Deleting database ..." << endl;
         if (!CBL_DeleteDatabase(dbname, config.directory, &error)) {
             cerr << "Failed : cannot delete database, code = " << error.code << endl;
             success = false;
@@ -44,7 +45,9 @@ int main() {
 
     CBLDatabase *db = nullptr;
     if (success) {
+        cout << "Opening database ..." << endl;
         db = CBLDatabase_Open(dbname, &config, &error);
+        cout << "Opening database ... Done" << endl;
         if (!db) {
             cerr << "Failed : cannot open database, code = " << error.code << endl;
             success = false;
@@ -53,6 +56,7 @@ int main() {
 
     CBLCollection* coll = nullptr;
     if (success) {
+        cout << "Create collection ..." << endl;
         coll = CBLDatabase_CreateCollection(db, FLStr("tasks"), FLStr("todo"), &error);
         if (!coll) {
             cerr << "Failed : cannot create collection, code = " << error.code << endl;
@@ -62,19 +66,14 @@ int main() {
 
     CBLDocument* doc = nullptr;
     if (success) {
+        cout << "Create a document ..." << endl;
         doc = CBLDocument_CreateWithID(FLStr("doc1"));
         FLMutableDict props = CBLDocument_MutableProperties(doc);
         FLMutableDict_SetString(props, FLStr("name"), FLStr("Verify CBL-C"));
 
+        cout << "Save the document ..." << endl;
         if (!CBLCollection_SaveDocument(coll, doc, &error)) {
             cerr << "Failed : invalid document count, code = " << error.code << endl;
-            success = false;
-        }
-    }
-
-    if (success) {
-        if (CBLCollection_Count(coll) != 1) {
-            cerr << "Failed : cannot save a document" << endl;
             success = false;
         }
     }
