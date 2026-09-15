@@ -22,12 +22,16 @@ else
     ZIP_FILENAME=couchbase-lite-c-${EDITION}-${VERSION}-${BLD_NUM}-ios.zip
     curl -O http://latestbuilds.service.couchbase.com/builds/latestbuilds/couchbase-lite-c/${VERSION}/${BLD_NUM}/${ZIP_FILENAME}
 fi
-unzip ${ZIP_FILENAME}
+unzip -o ${ZIP_FILENAME}
 rm ${ZIP_FILENAME}
 popd > /dev/null
 
-DEVICE=`xcrun xctrace list devices 2>&1 | grep -oE 'iPhone.*?[^\(]+' | head -1 | sed 's/Simulator//g' | awk '{$1=$1;print}'`
+# Select any available iPhone simulator by UDID. Selecting by name alone fails
+# when that model does not exist in the newest installed runtime, which is the
+# only runtime xcodebuild resolves a bare name against.
+DEVICE=$(xcrun simctl list devices available iPhone | grep -m1 -oE 'iPhone[^(]*\([0-9A-F-]{36}\)')
+DEVICE_UDID=$(echo "$DEVICE" | grep -oE '[0-9A-F-]{36}')
 echo "Selected testing device : ${DEVICE}"
-xcodebuild test -project CBLC-Verify.xcodeproj -scheme "CBLC-Verify" -destination "platform=iOS Simulator,name=${DEVICE}" 
+xcodebuild test -project CBLC-Verify.xcodeproj -scheme "CBLC-Verify" -destination "platform=iOS Simulator,id=${DEVICE_UDID}" 
 
 popd > /dev/null
